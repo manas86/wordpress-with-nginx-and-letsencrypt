@@ -10,7 +10,7 @@ if [[ -d "/etc/letsencrypt/live/vihaan-photography.com" ]]; then
         certbot renew --quiet
 else
         if ! [[ -d "/etc/letsencrypt/live/example.com" ]]; then
-                certbot --nginx -m manas.samantaray@gmail.com --agree-tos --no-eff-email --redirect --expand -d vihaan-photography.com,www.vihaan-photography.com
+                certbot --nginx -m mtestemail@gmail.com --agree-tos --no-eff-email --redirect --expand -d vihaan-photography.com,www.vihaan-photography.com
         fi
         if ! [[ -f "/etc/ssl/certs/dhparam.pem" ]]; then
                 openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
